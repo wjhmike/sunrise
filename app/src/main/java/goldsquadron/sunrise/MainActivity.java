@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Button alButton;
-    private Button cancelButton;
+    private Button btButton;
 
 
     @Override
@@ -22,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
                 openAlarmPage();
             }
         });
-
-        /*cancelButton = findViewById(R.id.cancelButton);
-        cancelButton.setOnClickListener(new View.OnClickListener() {
+        btButton = (Button) findViewById(R.id.roomButton);
+        btButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cancelActivity();
+                openBluetoothPage();
             }
-        });*/
+        });
+
     }
 
     public void openAlarmPage(){
@@ -37,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*public void cancelActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
+    public void openBluetoothPage(){
+        Intent intent = new Intent(this, btTest.class);
         startActivity(intent);
-    }*/
+    }
 
 }
